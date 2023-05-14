@@ -1,0 +1,17 @@
+/// Este archivo define una función que devuelve un color de la lista de colores de sección en función del número que se le pase como argumento.
+///
+/// @function colorSectionTitle
+/// @param {Number} $num - El número de la sección.
+/// @return {Color} - El color correspondiente a la sección.
+/// @example
+/// colorSectionTitle(1); // returns #963c1c
+/// colorSectionTitle(2); // returns #2ac446
+/// colorSectionTitle(3); // returns #ea991f
+/// colorSectionTitle(4); // returns #be31e9
+@use "sass:list";
+@use "vars";
+
+@function colorSectionTitle($num) {
+$colors: map-values(vars.$color-section-title);
+@return list.nth($colors, $num);
+}

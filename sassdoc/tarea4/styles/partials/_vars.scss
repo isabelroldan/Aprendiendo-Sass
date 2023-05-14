@@ -1,0 +1,28 @@
+/// Configuración de colores para el tema de la página
+///
+/// $color-theme: Indica el tema que se está utilizando, puede ser 'light' o 'dark'.
+///
+/// Colores para el modo claro:
+/// $color-bg-light: Color de fondo para el modo claro.
+/// $color-text-light: Color de texto para el modo claro.
+///
+/// Colores para el modo oscuro:
+/// $color-bg-dark: Color de fondo para el modo oscuro.
+/// $color-text-dark: Color de texto para el modo oscuro.
+///
+/// $color-section-title: Mapa que contiene los colores para los títulos de sección.
+///
+$color-theme: 'light';
+
+$color-bg-light: #ffffff;  /// Color de fondo para el modo claro.
+$color-text-light: #333333;  /// Color de texto para el modo claro.
+
+$color-bg-dark: #222222;  /// Color de fondo para el modo oscuro.
+$color-text-dark: #ffffff;  /// Color de texto para el modo oscuro.
+
+$color-section-title: (  /// Mapa que contiene los colores para los títulos de sección.
+  1: #963c1c,
+  2: #2ac446,
+  3: #ea991f,
+  4: #be31e9
+);

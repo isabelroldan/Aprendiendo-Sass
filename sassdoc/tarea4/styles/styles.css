@@ -1,0 +1,114 @@
+.section {
+  margin-top: 50px;
+}
+.section .section-title-1,
+.section .section-title-2,
+.section .section-title-3,
+.section .section-title-4 {
+  border-bottom: 1px solid black;
+  margin-bottom: 15px;
+}
+
+.section-header {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.section-content {
+  font-size: 18px;
+  color: #666666;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.section__list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.section__list-item.no-flex {
+  display: block;
+}
+.section__list-item .left {
+  width: 60%;
+}
+.section__list-item .right {
+  width: 40%;
+}
+
+.container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  padding: 60px 0;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+  padding: 50px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.full-name {
+  font-size: 50px;
+}
+
+.name {
+  font-size: 16px;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.email-val {
+  padding-right: 3%;
+  border-right: solid 1px;
+  margin-right: 3%;
+}
+
+.skills__item .left .name {
+  font-weight: 100;
+}
+
+.job-title {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 10px;
+  color: #999999;
+}
+
+.contact-info {
+  margin-top: 50px;
+}
+
+.section-title-1 {
+  color: #963c1c;
+}
+.section-title-2 {
+  color: #2ac446;
+}
+.section-title-3 {
+  color: #ea991f;
+}
+.section-title-4 {
+  color: #be31e9;
+}
+
+/*# sourceMappingURL=styles.css.map */

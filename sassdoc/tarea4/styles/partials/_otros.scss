@@ -1,0 +1,81 @@
+/// Este archivo utiliza tres módulos: "functions", "vars" y "mixins" que se usan en el siguiente código para definir el estilo de una página web.
+@use "functions"; 
+@use "vars"; 
+@use "mixins"; 
+
+/// La clase ".container" utiliza el mixin "centrado" para centrar el contenido en la página con un margen superior e inferior y un ancho del 80%.
+.container {
+  @include mixins.centrado(50px, 50px, 80%);
+}
+
+/// La etiqueta "body" establece el padding, el color de fondo y el color de texto de la página, dependiendo de la variable "$color-theme" definida en el módulo "vars".
+body {
+  padding: 60px 0;
+  background-color: vars.$color-bg-light;
+  color: vars.$color-text-light;
+
+
+  @if vars.$color-theme == 'dark' {
+    background-color: vars.$color-bg-dark;
+    color: vars.$color-text-dark;
+  }
+}
+
+/// La etiqueta "body" también define la fuente, el tamaño de fuente y el espacio entre líneas del texto.
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/// La clase ".container" establece un ancho de 800 píxeles, un margen automático para centrarlo horizontalmente, un relleno de 50 píxeles y una sombra con borde redondeado.
+.container {
+  width: 800px;
+  margin: 0 auto;
+  padding: 50px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+/// La clase ".full-name" establece un tamaño de fuente de 50 píxeles.
+.full-name {
+  font-size: 50px;
+}
+
+/// La clase ".name" establece un tamaño de fuente de 16 píxeles, un margen superior de 30 píxeles y un peso de fuente en negrita.
+.name {
+  font-size: 16px;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+/// La clase ".email-val" establece un relleno del 3% en el lado derecho, un borde sólido de 1 píxel a la derecha y un margen a la derecha del 3%.
+.email-val{
+  padding-right: 3%;
+  border-right: solid 1px;
+  margin-right: 3%;
+}
+
+/// La clase ".skills__item .left .name" establece un peso de fuente en 100.
+.skills__item {
+  .left {
+    .name {
+      font-weight: 100;
+    }
+  }
+}
+
+
+/// La clase ".contact-info" establece un margen superior de 50 píxeles.
+.contact-info {
+  margin-top: 50px;
+}
+
+/// La clase ".section-title" utiliza un bucle "for" para iterar sobre una variable "$color-section-title" definida en el módulo "vars" y establecer el color del texto en base al valor de la variable.
+.section-title {
+  @for $i from 1 through length(vars.$color-section-title) {
+    &-#{$i} {
+      color: functions.colorSectionTitle($i);
+    }
+  }
+}

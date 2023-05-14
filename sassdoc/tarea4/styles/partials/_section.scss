@@ -1,0 +1,54 @@
+/// Este archivo define estilos para secciones.
+
+/// @use "vars";
+
+.section {
+  margin-top: 50px;
+  
+  /// Estilos para los títulos de sección.
+  .section-title-1,
+  .section-title-2,
+  .section-title-3,
+  .section-title-4 {
+  border-bottom: 1px solid black;
+  margin-bottom: 15px;
+  }
+  }
+  
+  /// Estilos para el encabezado de una sección.
+  .section-header {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 20px;
+  }
+  
+  /// Estilos para el contenido de una sección.
+  .section-content {
+  font-size: 18px;
+  color: #666666;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  }
+  
+  /// Estilos para los elementos de una lista dentro de una sección.
+  .section__list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  
+  &.no-flex {
+  display: block;
+  }
+  
+  .left {
+  width: 60%;
+  }
+  
+  .right {
+  width: 40%;
+  }
+  }
+
+
+  
