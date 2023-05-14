@@ -1,0 +1,8 @@
+/*!Función para indicar las anchuras de los elementos principales en los distintos breakpoint*/
+@function calcularAnchura($ancho, $contenedor) {
+    @if $contenedor == null {
+      @return ($ancho * 1px);
+    } @else {
+      @return calc(#{$ancho} / #{math.div($contenedor, 1)} * 100%);
+    }
+}

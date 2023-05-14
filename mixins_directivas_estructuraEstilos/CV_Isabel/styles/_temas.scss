@@ -1,0 +1,162 @@
+/* Estilos generales */
+body {
+    background-color: $color-fondo;
+    font-family: Arial, sans-serif;
+}
+
+/*!Estructura de anidamiento: header, nav, ul, li, a*/
+header {
+    background-color: $color-primario;
+    color: white;
+    padding: 20px;
+    position: relative;
+
+    h1 {
+        font-size: 36px;
+        margin: 0;
+    }
+
+    
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                display: inline-block;
+                margin-right: 20px;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $color-secundario;
+                    }
+                }
+            }
+        }
+}
+
+main {
+    max-width: $ancho-contenedor;
+    margin: 0 auto;
+    padding: 20px;
+
+    section {
+        margin-bottom: 40px;
+
+        h2 {
+            color: $color-primario;
+            margin-top: 0;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin-bottom: 20px;
+
+                h3 {
+                    margin: 0;
+                }
+
+                p {
+                    margin: 0;
+
+                    &:last-child {
+                        color: $color-secundario;
+                    }
+                }
+
+                ul {
+                    margin-top: 10px;
+                    margin-bottom: 0;
+                    padding-left: 20px;
+
+                    li {
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+section#sobre-mi {
+    p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+}
+
+section#habilidades {
+    ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        li {
+            width: calc(50% - 10px);
+            background-color: $color-primario;
+            color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+
+            &:nth-child(odd) {
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+// Anchura del elemento principal en breakpoint XS
+body {
+    width: calcularAnchura(50, $contenedor-xs) + px;
+}
+
+// Anchura del elemento principal en breakpoint SM
+@media (min-width: $contenedor-sm) {
+    body {
+        width: calcularAnchura(33, $contenedor-sm) + px;
+    }
+}
+
+// Anchura del elemento principal en breakpoint MD
+@media (min-width: $contenedor-md) {
+    body {
+        width: calcularAnchura(25, $contenedor-md) + px;
+    }
+}
+
+// Anchura del elemento principal en breakpoint LG
+@media (min-width: $contenedor-lg) {
+    body {
+        width: calcularAnchura(20, $contenedor-lg) + px;
+    }
+}
+
+/*Tercera tarea*/
+/*Mixins*/
+#educacion{
+    position: relative;
+  width: 50%;
+  height: 200px;
+  background-color: rgb(37, 88, 109);
+  @include center-block;
+}
+
+.modulos{
+    @include center-inline; 
+
+    h2{
+        margin: 15%;
+    }
+}
+
+
+
+

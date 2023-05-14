@@ -1,0 +1,18 @@
+table {
+    tr {
+      @for $i from 1 through 7 {
+        &:nth-child(#{$i}) {
+          background-color: nth($colores, $i);
+        }
+      }
+      td:nth-child(even) {
+        text-align: right;
+      }
+    }
+}
+
+@for $i from 1 through 6 {
+    h#{$i} {
+      font-size: nth($tamanos, $i);
+    }
+  }
